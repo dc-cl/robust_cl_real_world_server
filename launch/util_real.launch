@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="robust_cl_real_world_server" type="util_real.py" name="server" output="screen"/>
+</launch>
