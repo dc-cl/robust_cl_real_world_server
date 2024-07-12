@@ -1,7 +1,7 @@
 <launch>
     <!-- <rosparam param="num_robots" subst_value="True">3</rosparam> -->
     <arg name="num_robots_arg" default="3" />
-    <param name="num_robots" type="int" default="$(arg num_robots_arg)"/>
+    <param name="num_robots" type="int" value="$(arg num_robots_arg)"/>
     <node pkg="robust_cl_real_world_server" type="middle" name="middle_0"  output="screen"/>
     <node pkg="cla_monitor" type="cla_monitor_listener" name="ui" output="screen"/>
 </launch>

@@ -115,7 +115,7 @@ int main(int argc, char** argv) {
         ROS_ERROR("Need to specify the number of robots as an argument.");
         return -1;
     }
-    int i_num_robots;
+    int i_num_robots = 3;
     nh.getParam("num_robots", i_num_robots);
 
     const std::string topic_base = "/nlink_linktrack_nodeframe2_";
