@@ -108,13 +108,15 @@ private:
 const double epsilon = std::numeric_limits<double>::epsilon();
 
 int main(int argc, char** argv) {
-    if(argc < 2) {
+    
+    ros::init(argc, argv, "middle");
+    ros::NodeHandle nh;
+    if(!nh.hasParam("num_robots")) {
         ROS_ERROR("Need to specify the number of robots as an argument.");
         return -1;
     }
-    const int i_num_robots = std::stoi(argv[1]);
-    ros::init(argc, argv, "middle");
-    ros::NodeHandle nh;
+    int i_num_robots;
+    nh.getParam("num_robots", i_num_robots);
 
     const std::string topic_base = "/nlink_linktrack_nodeframe2_";
     // Create instances for each pair of topics
