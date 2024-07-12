@@ -1,4 +1,0 @@
-<launch>
-    <rosparam param="num_robots" subst_value="True">3</rosparam>
-    <node pkg="cla_monitor" type="cla_monitor_listener" name="ui" output="screen"/>
-</launch>

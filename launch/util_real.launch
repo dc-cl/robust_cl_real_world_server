@@ -1,17 +1,5 @@
 <launch>
-    <!-- <node pkg="robust_cl_real_world_server" type="util_real.py" name="server" output="screen"/> -->    
-    <arg name="topic_name0" default="nlink_linktrack_nodeframe2_0" />
-    <arg name="topic_name2" default="nlink_linktrack_nodeframe2_2" />
-
     <rosparam param="num_robots" subst_value="True">3</rosparam>
     <node pkg="robust_cl_real_world_server" type="middle" name="middle_0"  output="screen"/>
-    <node pkg="robust_cl_real_world_server" type="middle" name="middle_1"  output="screen">
-        <remap from="$(arg topic_name0)" to="nlink_linktrack_nodeframe2_3"/>
-        <remap from="$(arg topic_name2)" to="nlink_linktrack_nodeframe2_5"/>
-    </node>
-    <node pkg="robust_cl_real_world_server" type="middle" name="middle_2"  output="screen">
-        <remap from="$(arg topic_name0)" to="nlink_linktrack_nodeframe2_6"/>
-        <remap from="$(arg topic_name2)" to="nlink_linktrack_nodeframe2_8"/>
-    </node>
     <node pkg="cla_monitor" type="cla_monitor_listener" name="ui" output="screen"/>
 </launch>
