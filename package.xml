@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>robust_cl_real_world_server</name>
-  <version>0.0.0</version>
+  <version>0.2.0</version>
   <description>The robust_cl_real_world_server package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
   <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
-  <maintainer email="sysu@todo.todo">sysu</maintainer>
+  <maintainer email="herh5@mail2.sysu.edu.cn">herh</maintainer>
 
 
   <!-- One license tag required, multiple allowed, one license per tag -->
@@ -33,6 +33,8 @@
   <!-- Examples: -->
   <!-- Use depend as a shortcut for packages that are both build and exec dependencies -->
   <!--   <depend>roscpp</depend> -->
+  <depend>nlink_parser</depend>
+  <depend>cla_monitor</depend>
   <!--   Note that this is equivalent to the following: -->
   <!--   <build_depend>roscpp</build_depend> -->
   <!--   <exec_depend>roscpp</exec_depend> -->
